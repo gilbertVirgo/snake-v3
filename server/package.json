@@ -1,0 +1,21 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "* Player creates a new game * Player(s) join the game     * Player instance(s) added to entities array * Game starts (when room is full or a player starts)     * Bounds generated     * Fruit instance added to entities array     * Tick         * Bodies array cleared of dynamic bodies         * Entities array cleared of dead entities         * Entities updated         * Check for collisions * Game ends",
+  "main": "server.js",
+  "dependencies": {
+    "dotenv": "^8.1.0",
+    "random-number": "0.0.9",
+    "randomstring": "^1.1.5",
+    "ws": "^7.1.2"
+  },
+  "devDependencies": {
+    "eslint": "^6.5.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "",
+  "license": "ISC"
+}

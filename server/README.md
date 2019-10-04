@@ -1,48 +1,14 @@
-# Classes
+# Flow
 
-## Game
-### Properties
-* id
-* players
-* width
-* height
-* bodies
-
-### Methods
-* init
-* tick
-
-## Body
-### Properties
-* x
-* y
-* width
-* height
-* weight
-
-### Methods
-* intersects
-* kills
-* die
-
-## Player
-### Properties
-* id
-* x
-* y
-* direction
-* parts
-
-### Methods
-* tick
-
-## Fruit
-### Properties
-* x
-* y
-
-## Bounds
-### Properties
-* width
-* height
-
+* Player creates a new game
+* Player(s) join the game
+    * Player instance(s) added to entities array
+* Game starts (when room is full or a player starts)
+    * Bounds generated
+    * Fruit instance added to entities array
+    * Tick
+        * Bodies array cleared of dynamic bodies
+        * Entities array cleared of dead entities
+        * Entities updated
+        * Check for collisions
+* Game ends
