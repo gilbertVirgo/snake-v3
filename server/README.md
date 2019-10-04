@@ -1,5 +1,3 @@
-# Pseudo code
-
 # Classes
 
 ## Game
