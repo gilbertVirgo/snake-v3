@@ -1,11 +1,17 @@
 import _ from "lodash";
 
-function component() {
-    const element = document.createElement('div');
+const init = () => {
+    const socket = new WebSocket("ws://localhost:5000");
 
-    element.innerHTML = _.join(['Hello', 'webpack'], ' ');
+    // Connection opened
+    socket.addEventListener("open", () => {
+        socket.send("this is my messig");
+    });
 
-    return element;
-  }
+    // Listen for messages
+    socket.addEventListener("message", ({data}) => {
+        console.log("Message from server ", data);
+    });
+}
 
-  document.body.appendChild(component());
+window.addEventListener("load", init);
