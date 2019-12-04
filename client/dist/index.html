@@ -6,11 +6,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+
+    <style>
+        input[type="text"] {
+            display: block;
+        }
+
+        #button-container {
+            visibility: hidden;
+        }
+    </style>
 </head>
 
 <body>
+    <div id="button-container">
+        <section>
+            <input type="text" id="gameId" placeholder="Game ID" />
+            <input type="text" id="playerId" placeholder="Player ID" />
+        </section>
+        <section>
+            <button id="join">Join</button>
+            <button id="create">Create</button>
+            <button id="start">Start</button>
+        </section>
+    </div>
+
     <canvas id="canvas"></canvas>
-    <h1>Yeah baby</h1>
     <script src="main.js"></script>
 </body>
 

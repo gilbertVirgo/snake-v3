@@ -13,14 +13,14 @@ class Fruit extends Entity {
 
     tick() {
         if(this.dead) {
-            const body = new Body({
+            const body = new Body(this, {
                 x: this.x,
                 y: this.y,
                 weight: this.weight
             });
 
             return [body];
-        }
+        } else return null;
     }
 }
 

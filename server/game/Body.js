@@ -7,6 +7,12 @@ class Body {
         this.dynamic = dynamic; // if dynamic, die after one tick
     }
 
+    get getX() { return this.x }
+    get getY() { return this.y }
+
+    set setX(x) { this.x = x }
+    set setY(y) { this.y = y }
+
     intersects(body) {
         let x = this.x === body.x, 
             y = this.y === body.y;
